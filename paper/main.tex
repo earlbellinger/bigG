@@ -1,0 +1,337 @@
+\documentclass[twocolumn]{aastex63}
+
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+
+\setlength{\parindent}{1.33em}
+
+\graphicspath{{./}{figs/}}
+
+\usepackage{amsmath}
+\usepackage{appendix}
+
+\usepackage{needspace}
+
+
+\newif\ifref
+\reftrue
+\reffalse
+\definecolor{darkred}{rgb}{0.75, 0, 0}
+\newcommand{\mb}[1]{\ifref\textcolor{darkred}{#1}\else #1\fi}
+
+\newif\ifreff
+\refftrue
+\refffalse
+\definecolor{darkred}{rgb}{0.75, 0, 0}
+\newcommand{\mbb}[1]{\ifreff\textcolor{darkred}{#1}\else #1\fi}
+
+
+%\received{\today}
+%\revised{...}
+%\accepted{...}
+\accepted{September 12, 2019}
+
+\submitjournal{Astrophysical Journal Letters}
+
+\shorttitle{Asteroseismic Constraints on $\dot G$}
+\shortauthors{Bellinger \& Christensen-Dalsgaard}
+
+\begin{document}
+\title{\normalfont Asteroseismic constraints on the cosmic-time variation of \\the gravitational constant from an ancient main-sequence star}
+
+\correspondingauthor{E.\ P.\ Bellinger}
+\email{bellinger@phys.au.dk}
+
+\author[0000-0003-4456-4863]{Earl Patrick Bellinger} 
+\altaffiliation{SAC Postdoctoral Fellow} 
+\affil{Stellar Astrophysics Centre\\ 
+Department of Physics and Astronomy\\ 
+Aarhus University\\ 
+Denmark} 
+
+\author[0000-0001-5137-0966]{J{\o}rgen Christensen-Dalsgaard} 
+\affil{Stellar Astrophysics Centre\\ 
+Department of Physics and Astronomy\\ 
+Aarhus University\\ 
+Denmark}
+
+\begin{abstract} 
+    We investigate the variation of the gravitational constant $G$ over the history of the Universe by modeling the effects on the evolution and asteroseismology of the low-mass star KIC~7970740, which is one of the oldest ($\sim 11$~Gyr) and best-observed solar-like oscillators in the Galaxy. 
+    From these data we find ${\dot{G}/G = (2.1 \pm 2.9) \times 10^{-12}~\text{yr}^{-1}}$, that is, no evidence for any variation in $G$. 
+    We also find a Bayesian asteroseismic estimate of the age of the Universe as well as astrophysical S-factors for five nuclear reactions obtained through a 12-dimensional stellar evolution Markov chain Monte Carlo simulation. 
+\end{abstract}
+
+\keywords{asteroseismology --- gravitation --- cosmological parameters --- stars: evolution, oscillations } 
+
+\section{Introduction} \label{sec:intro} 
+Is the gravitational constant actually constant? 
+Interest in this question goes back at least to the time of \citet{1937Natur.139..323D}. 
+On the one hand, Einstein's theory of general relativity says \emph{yes}: according to the equivalence principle, the outcome of any local experiment in a freely falling laboratory is independent of its position in spacetime. 
+Hence, $G$ is the same everywhere for all time. 
+String theory and other theories of modified gravity, on the other hand, say \emph{no}: the gravitational `constant' is rather a derived parameter which can vary over cosmic time (see, e.g., \citealt{2003RvMP...75..403U, Uzan2011} and \citealt{2011PThPh.126..993C} for reviews). 
+
+The constancy of $G$ is an empirical question which can be investigated through astrophysical experimentation. 
+The strongest constraints to date come from the dynamics of the solar system. 
+The Lunar Ranging Experiment \citep{1962Natur.194.1267S, 2013RPPh...76g6901M} gives $\dot{G}/G = {(7.1\pm7.6) \times 10^{-14}}\;\text{yr}^{-1}$ over the past few decades \citep{0264-9381-35-3-035015}. 
+Similarly, the \textsc{Messenger} probe \citep{2018NatCo...9..289G} has used the ephemeris of Mercury to find ${|\dot{G}|/G < 4 \times 10^{-14}}\;\text{yr}^{-1}$ over the past seven years. 
+Other local (in both time and space) constraints have been derived from other planetary motions \citep{PhysRevLett.51.1609}, exoplanetary motions \citep{2016PASJ...68L...5M}, and pulsar binaries \citep{1991ApJ...366..501D, 2019MNRAS.482.3249Z}, among others. 
+
+Though these experiments are consistent with a constant $G$, they do not probe $\dot G$ over cosmic time, where presumably any major variations to $G$ would have transpired. 
+Experiments which do probe cosmic time, albeit in a model-dependent fashion, include measurements from helioseismology \citep{1998ApJ...498..871G}, white dwarfs \citep{2011JCAP...05..021G, 2013JCAP...06..032C}, and globular clusters \citep{1996A&A...312..345D}. 
+More distant constraints have been derived from big bang nucleosynthesis \citep{1990PhLB..248..146A} and anisotropy in the cosmic microwave background \citep{2004PhRvD..69h3512N}. 
+These experiments are also consistent with a constant $G$, albeit with greater uncertainty ($|\dot G/G| \lessapprox 10^{-12}\;\text{yr}^{-1}$). 
+
+In this Letter, we contribute a new experiment to test the cosmic-time variation of $G$ using asteroseismology. 
+Thanks to four years of observations from the \emph{Kepler} mission \citep{2010Sci...327..977B}, there are now extraordinarily accurate measurements of stellar oscillations from solar-like stars in the Galaxy. 
+For a typical well-observed solar-type star, dozens of oscillation mode frequencies can be resolved. 
+As the properties of the oscillations depend on the properties of the star, asteroseismic data can be used to constrain stellar global parameters. 
+By furthermore assuming that the theory of stellar evolution is approximately correct, constraints can be placed on the age and evolutionary history of the star by fitting models to the data. 
+
+Here we study a rich spectrum of acoustic oscillation mode frequencies measured from a low-mass solar-like star on the main sequence, KIC~7970740, and determine whether the observations of this star are consistent with a constant gravitational constant. 
+The use of a low-mass star such as this one is ideal because it avoids the theoretical uncertainties associated with higher mass stars, such as element diffusion and convective core overshoot. 
+
+A variable gravitational constant has several consequences for stars and their evolution \citep[e.g.,][]{1977A&A....56..359M}. 
+\citet{PhysRev.73.801} showed that the luminosities of stars vary as $L \propto G^7 M^5$; hence, ${\dot G \neq 0}$ directly changes the rate of stellar evolution (see Figure~\ref{fig:HR}). 
+Indeed, a negative $\dot G$ has been proposed as a resolution to the faint young Sun paradox\footnote{Ironically, Teller's initial motivation for deriving this relation was to show that geological evidence is incompatible with $\dot G \neq 0$.} \citep{2014IJMPD..2342018S}. 
+This modification to stellar evolution then affects acoustic stellar oscillation mode frequencies and their associated separations and ratios (see Figure~\ref{fig:CD}), as these quantities are sensitive to the composition of the stellar core. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{HR.pdf}
+    \caption{Theoretical evolution of a star with ${M/\text{M}_\odot=0.75}$ and ${Z=0.001}$ through the Hertzsprung--Russell diagram for varying amounts of ${\dot G}$ from the zero-age main sequence (black dots) until an age of 11~Gyr. 
+    Tracks computed with positive (negative) values of $\beta$ (\emph{cf}. Equation~\ref{eq:pow-law}) are shown in orange (blue), corresponding to gravity that was stronger (weaker) in the past. \\[0.5\baselineskip]
+    \label{fig:HR}} 
+%\end{figure}
+%
+%\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth, trim={0 0 0 1.5cm}, clip]{CD.pdf}
+    \caption{The same as the previous figure, now showing the theoretical evolution of the star through the asteroseismic HR diagram \citep{1988IAUS..123..295C}. 
+    \label{fig:CD}}
+\end{figure}
+
+The star we have selected was observed in short-cadence mode (i.e., every 58.89~seconds) for nearly 3 years by \emph{Kepler}. 
+Its spectroscopic data and asteroseismic frequencies were measured by \citet{2017ApJ...835..172L}, who identified 46 unique solar-like $p$-modes with spherical degrees ${\ell \leq 2}$. 
+The extraordinary precision with which these measurements have been made are worthy of note: several of the modes have uncertainties smaller than 0.1~$\mu$Hz, corresponding to a relative uncertainty of approximately 0.001\%. 
+The global observable parameters of this star were measured to be: 
+\begin{alignat}{2}
+    \text{[Fe/H]}   \;=&&~ -0.54   &\pm  0.10  ~\text{dex} \notag\\
+    T_\text{eff}    \;=&&~ 5309    &\pm  77    ~\text{K} \notag\\
+    \nu_{\max}      \;=&&~ 4197    &\pm 20   ~\mu\text{Hz} \\
+    \Delta\nu       \;=&&~ 173.541 &\pm  0.064 ~\mu\text{Hz} \notag\\
+    \delta\nu_{02}  \;=&&~ 7.901   &\pm  0.167 ~\mu\text{Hz}. \notag
+\end{alignat}
+The first two of these are the stellar metallicity and effective temperature. 
+The quantity $\nu_{\max}$ refers to the frequency at maximum oscillation power, which is related to the surface gravity of the star \citep[e.g.,][]{2010aste.book.....A, 10.2307/j.ctt1vwmgmn}. 
+The average spacing between radial oscillation mode frequencies, i.e., the large frequency separation, is given by $\Delta\nu$, and is related to the stellar mean density. 
+Finally, the small frequency separation---a proxy for the main-sequence age of the star---is denoted $\delta\nu_{02}$. %and is given by
+%\begin{equation}
+%    \delta\nu_{02}(n) = \nu_{n,0} - \nu_{n-1,2}
+%\end{equation}
+%where $\nu_{n,\ell}$ refers to the frequency of the mode with radial order $n$ and spherical degree $\ell$. 
+%where the symbols have their usual definitions \citep[e.g.,][]{2010aste.book.....A, 10.2307/j.ctt1vwmgmn}. %(for textbooks on asteroseismology, see \citealt{2010aste.book.....A} and \citealt{10.2307/j.ctt1vwmgmn}). 
+From these measurements it is clear that this star is an old, low-mass star on the main sequence. % \citep[e.g.,][]{Bellinger2019b}. 
+This description has been confirmed through detailed numerical simulations of this star by several groups \citep{2017ApJ...835..173S, 2017A&A...601A..67C, Bellinger2019a}. 
+
+
+\section{Methods} 
+We aim to model KIC~7970740 with a time-varying gravitational constant, and determine the variations in $G$ which are empirically consistent with the stringent observational constraints that have been obtained for this star. 
+As is commonly done \citep[e.g.,][]{1994ApJ...437..870D, 1998ApJ...498..871G, 1996A&A...312..345D}, we assume the gravitational constant $G$ varies over cosmic time $t$ according to a power law:
+\begin{equation} \label{eq:pow-law}
+    G(t) = G_0 \left(
+        \frac{t_0}{t}
+    \right)^\beta
+\end{equation}
+where ${G_0 = (6.67408 \pm 0.00031)\times 10^{-8}}$ g$^{-1}$~cm$^{3}$~s$^{-2}$ is the presently observed gravitational constant \citep{2016RvMP...88c5009M} and ${t_0=(13.799 \pm 0.021)\times 10^9}$~yr is the current age of the Universe \citep{2016A&A...594A..13P}. 
+Here we seek to estimate the gravitational evolution parameter $\beta$, where a value of zero corresponds to a constant $G$. 
+
+We use the \emph{Aarhus STellar Evolution Code} \citep[ASTEC,][]{2008Ap&SS.316...13C} to simulate the evolution of the star. 
+We use the \emph{Aarhus adiabatic oscillation package} \citep[ADIPLS,][]{2008Ap&SS.316..113C} to calculate the adiabatic oscillation mode frequencies for each of the computed models. 
+Example evolutionary tracks were shown in Figures~\ref{fig:HR} and \ref{fig:CD}. 
+
+
+In order to determine which theoretical models are consistent with the observations, we use Markov chain Monte Carlo \citep[MCMC, e.g.,][]{2010CAMCS...5...65G} 
+%\citep[MCMC, e.g.,][]{2012MNRAS.427.1847B, 2018ASSP...49..149L, 2019MNRAS.484..771R} 
+to obtain 100\,000 samples from the posterior distribution: 
+\begin{equation}
+    \underbrace{p(\boldsymbol\theta | \boldsymbol D)}_{\text{posterior}}
+    \propto 
+    \underbrace{\mathcal{L}(\boldsymbol\theta | \boldsymbol D)}_{\text{likelihood}} 
+    \cdot 
+    \underbrace{p(\boldsymbol \theta)}_{\text{prior}}.
+\end{equation}
+Here the values ${\boldsymbol\theta = \{ \beta}, \tau, M, Y_0, Z_0, \alpha_{\text{MLT}}, t_0,  \boldsymbol S(0) \}$ are the theoretical model parameters, where $\tau$ refers to the age of the star, $M$ its mass, $Y_0$ the initial fractional abundance of helium, $Z_0$ the initial fraction of heavy mass elements, $\alpha_{\text{MLT}}$ the mixing length parameter, and $\boldsymbol S(0)$ are astrophysical S-factors of nuclear reaction rates. 
+We use uniform priors on the first six of these parameters as tabulated in Table~\ref{tab:priors}. 
+\mbb{These priors were adopted because previous estimates for the parameters of this star came from the analysis of the same \emph{Kepler} data, and thus normal priors would yield falsely overconfident results.} 
+We adopt a normal prior on the age of the Universe as given above as well as on the astrophysical S-factors as given in Table~\ref{tab:Sfactors}. 
+\mb{The posterior distribution of $\dot G/G$, as reflected primarily in the distribution of $\beta$, is the main interest of the present work.} 
+
+\begin{table}
+    \centering
+    \caption{Bounds on the Uniform Prior Distributions for the Input Parameters to the Stellar Evolution Simulations \label{tab:priors}}
+    \begin{tabular}{c|ccc}\hline
+        Parameter & Minimum & Maximum & Unit \\\hline\hline
+        $\beta$ & -0.2 & 0.2 & -- \\
+        $\tau$ & 0 & $t_0$ & Gyr \\
+        $M$ & 0.5 & 1 & M$_\odot$ \\ 
+        $Y_0$ & 0.2 & 0.4 & -- \\
+        $Z_0$ & 0.001 & 0.02 & -- \\ 
+        $\alpha_{\text{MLT}}$ & 0.2 & 2.5 & -- \\\hline
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Astrophysical S-factors of Nuclear Reactions \label{tab:Sfactors}}
+    \begin{tabular}{l p{7mm}p{0.4mm}l}\hline
+        Reaction & \multicolumn{3}{c}{$S(0)$/[keV b]} \\\hline\hline
+        \hphantom{$^{14}$}$p$($p$, e+ $\nu$)$d$ & $4.01 \, (1$&$\pm$&$0.01) \times 10^{-22}$ \\
+        \hphantom{$^{1}$}$^3$He($^3$He, 2$p$)$^4$He & $5.21 \, (1$&$\pm$&$0.05) \times 10^3$ \\
+        \hphantom{$^{1}$}$^3$He($^4$He, $\gamma$)$^7$Be & $0.56 \, (1$&$\pm$&$0.05)$ \\
+        \hphantom{$^{1}$}$^7$Be($p$, $\gamma$)$^8$B & $2.08 \, (1$&$\pm$&$0.08) \times 10^{-2}$ \\
+        $^{14}$N($p$, $\gamma$)$^{15}$O & $1.66 \, (1$&$\pm$&$0.07)$ \\
+        \hline
+    \end{tabular}\\[0.5\baselineskip]
+    \textbf{Note.} All values obtained from \citealt{2011RvMP...83..195A}. 
+\end{table}
+
+The values ${\boldsymbol D = \{T_{\text{eff}}}, \text{[Fe/H]}, \mathbf r_{102} \}$ are the observational data, the lattermost of which is a length-25 sequence comprised of $\mathbf r_{10}$ and $\mathbf r_{02}$ asteroseismic frequency separation ratios \citep{2003A&A...411..215R}. %(see \citealt{2003A&A...411..215R} for definitions). 
+These are defined as: 
+\begin{align}\notag
+    r_{10}(n) &= \dfrac%
+        {\nu_{n-1, 1} - 4\nu_{n,0} + 6\nu_{n,1} - 4\nu_{n+1,0} + \nu_{n+1,1}}%
+        {\nu_{n,0} - 8\nu_{n+1,0}}\\
+%\end{equation}
+%\begin{equation}
+    r_{02}(n) &= \dfrac{\nu_{n, 0} - \nu_{n-1, 2}}{\nu_{n,1} - \nu_{n-1, 1}}
+\end{align}
+where $\nu_{n,\ell}$ refers to the frequency of the mode with radial order $n$ and spherical degree $\ell$. 
+These quantities are useful because they probe the interior structure of the star and are insensitive to the near-surface layers. 
+
+The likelihood of the observed data for a given set of input parameters is given by
+\begin{equation}
+    \mathcal{L}(\boldsymbol\theta | \boldsymbol D) 
+    %=
+    %\frac{1}{\sqrt{(2\pi)^k~\text{det}(\boldsymbol \Sigma)}} \cdot
+    \propto 
+    \exp\left(-\frac{\chi^2}{2}\right)
+\end{equation}
+where the goodness-of-fit $\chi^2$ in this case is
+\begin{align}
+    \chi^2
+    = %&=
+    \mathbf{R}^{\text{T}} \boldsymbol{\Sigma}^{-1} \mathbf{R}%
+    ,\qquad %\\
+    R_i 
+    = %&=
+    D_i - A_i(\boldsymbol \theta). \label{eq:chi2}
+\end{align}
+Here $\mathbf \Sigma$ %\in \mathbb{R}^{k\times k}$ 
+is the full variance--covariance matrix for the observations, which accounts for the fact the observed asteroseismic frequency ratios are correlated \citep{2018arXiv180807556R}; and $\mathbf A$ is the result of calling ASTEC and ADIPLS with the given model parameters $\boldsymbol \theta$. 
+%\mb{It is worthy of mention that in terms of dimensionality, this is by far the most complex MCMC fit carried out with stellar modelling to date \citep[for comparison, see, e.g.,][]{2012MNRAS.427.1847B, 2018ASSP...49..149L, 2019MNRAS.484..771R}.}
+\mbb{It is worthy of mention that previous MCMC asteroseismic modeling has considered at most a four-dimensional parameter space \citep[see, e.g.,][]{2012MNRAS.427.1847B, 2018ASSP...49..149L, 2019MNRAS.484..771R}. 
+With twelve dimensions, this is, to our knowledge, the most complex asteroseismic modeling performed to date.}
+
+%\needspace{3\baselineskip}
+\section{Results \& Conclusions} 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth, trim={0 0 0 0.5cm}, clip]{beta_posterior.pdf}
+    \caption{\mb{Histogram of MCMC samples showing} the upper bound on the possible variation of $|\dot G/G|$. The 95\% credible interval is in blue. Values closer to zero are in support of general relativity; values farther from zero are in support of modified gravity. 
+    \label{fig:upper-bound}} 
+\end{figure}
+
+The procedure outlined in the previous section yields several results. 
+The main result is the value of the gravitational evolution parameter, which we find to be ${\beta = 0.029 \pm 0.041}$. 
+We also infer from this analysis an estimate of the age of the Universe, which we find to be ${t_0 = 13.80 \pm 0.14}$~Gyr. 
+Combining these two quantities yields a rate of change in $G$ of 
+\begin{equation}
+    \dot{G}/G = \beta/t_0 = (2.1 \pm 2.9) \times 10^{-12}~\text{yr}^{-1}.
+\end{equation}
+Hence we find no evidence for a variable gravitational constant. 
+We furthermore place a 95\% upper bound on the absolute variation 
+\begin{equation}
+    |\dot{G}/G| \leq 6.9 \times 10^{-12}\;\text{yr}^{-1}
+\end{equation}
+as visualized in Figure~\ref{fig:upper-bound}. 
+The posterior estimates for the five nuclear reaction rates are consistent with their prior values. 
+We tested this procedure under two assumptions of the solar composition: the \citet[][``GS98'']{1998SSRv...85..161G} values and the \citet[][``AGSS09'']{2009ARA&A..47..481A} values, and found the results to be the same. 
+%This result is comparable in strength from that of big bang nucleosynthesis. 
+\mb{These results are stronger than those from big bang nucleosynthesis, but probe less time; and weaker than those from helioseismology, but probe more than twice as much time.} 
+%These results are stronger than those from big bang nucleosynthesis, but younger; and weaker than those from helioseismology, but more than twice as old. 
+
+
+Lastly, we obtain new estimates for the stellar parameters of KIC~7970740: 
+\begin{alignat}{2}
+    \tau   \;=&&~ 10.7   &\pm  1.2  ~\text{Gyr} \notag\\
+    M    \;=&&~ 0.725    &\pm  0.044    ~\text{M}_\odot \notag\\
+    Y_0      \;=&&~ 0.251    &\pm 0.033 \\
+    Z_0       \;=&&~ 0.0059 &\pm  0.0013 \notag\\
+    \alpha_{\text{MLT}}  \;=&&~ 1.90   &\pm  0.23. \notag
+\end{alignat}
+%These are tabulated in Table~\ref{tab:posterior}. 
+These values are in good agreement with those presented by \citet{2017ApJ...835..173S}, who found for this star a mass of ${0.728 \pm 0.020~\text{M}_\odot}$ and an age of $12.9 \pm 1.6$~Gyr. 
+It is worthy of note that the mean posterior value of the initial helium abundance of this star is above the primordial helium abundance $Y_p = 0.2463$ inferred by the \emph{Planck} mission \citep{2014JCAP...10..050C}.
+
+%This investigation has shown that asteroseismology can be a powerful tool for rigorously testing physical theory.
+\mbb{Investigation into the constancy of G is still a very active area of inquiry spanning a wide range of domains in astrophysics. 
+This work lays a bridge between asteroseismology and these other disciplines by enabling the use of individual stars for obtaining constraints at every age.}  
+In the future, it will be interesting to apply this technique to an ensemble of stars, which should yield an even stronger result. 
+In addition, it will be interesting to use asteroseismology to constrain the variation of other values that are thought to be constant, such as the fine structure constant \citep{2006ESASP.617E..37B}. 
+
+
+\acknowledgements{} 
+    We thank the anonymous referee for useful comments and suggestions. 
+    Funding for the Stellar Astrophysics Centre is provided by The Danish National Research Foundation (Grant agreement no.: DNRF106). 
+    The numerical results presented in this work were obtained at the Centre for Scientific Computing, Aarhus. %\footnote{\url{http://phys.au.dk/forskning/cscaa/}}.
+\software{} Python, emcee \citep{emcee}, R \citep{r}, ASTEC \citep{2008Ap&SS.316...13C}, ADIPLS \citep{2008Ap&SS.316..113C}
+
+
+%\clearpage
+\bibliographystyle{aasjournal.bst}
+\bibliography{main}
+
+
+%\clearpage
+\iffalse
+\appendix
+\section{MESA}
+Although we performed this investigation using ASTEC, for didactic purposes we show here how a similar investigation using the open-source stellar evolution code MESA \citep{2011ApJS..192....3P} would be possible through a modification of \verb|run_stars_extras.f| file as follows: 
+\begin{minted}{FORTRAN}
+integer function extras_finish_step(id, id_extra)
+    integer, intent(in) :: id, id_extra
+    integer :: ierr
+    type (star_info), pointer :: s
+    
+    ierr = 0
+    call star_ptr(id, s, ierr)
+    if (ierr /= 0) return
+    extras_finish_step = keep_going
+    call store_extra_info(s)
+    
+    ! Power law for changing gravitational constant over time
+    ! G(t) = G_0 * (t_0 / t)**beta
+    ! where G_0 = 6.67408 * 10^-8 is the currently observed G,
+    !       t_0 = 13.799 * 10^9 is the age of the universe,
+    !   and t is the current age.
+    ! For our purposes, this can be transformed into
+    ! G(t) = G_0 * (t_0 / (t_0 - t_max + t))**beta
+    ! where t_max is the maximum age (i.e., the stopping condition).
+    ! Here x_ctrl(1) === beta
+    !  and x_ctrl(2) === t_0.
+    standard_cgrav = 6.67408d-8 * ( &
+            x_ctrl(2) / (x_ctrl(2) - s% max_age + s% star_age) &
+        )**s% x_ctrl(1)
+
+    if (extras_finish_step == terminate) then
+        s% termination_code = t_extras_finish_step
+    end if
+end function extras_finish_step
+\end{minted}
+The value for $\beta$ can then be varied through the \verb|inlist| file with the control \verb|x_ctrl(1)|. 
+\fi
+
+
+\end{document}

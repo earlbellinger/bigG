@@ -1,0 +1,249 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+\providecommand{\dodoi}[1]{doi:~\href{http://doi.org/#1}{\nolinkurl{#1}}}
+\providecommand{\doeprint}[1]{\href{http://ascl.net/#1}{\nolinkurl{http://ascl.net/#1}}}
+\providecommand{\doarXiv}[1]{\href{https://arxiv.org/abs/#1}{\nolinkurl{https://arxiv.org/abs/#1}}}
+
+\bibitem[{{Accetta} {et~al.}(1990){Accetta}, {Krauss}, \&
+  {Romanelli}}]{1990PhLB..248..146A}
+{Accetta}, F.~S., {Krauss}, L.~M., \& {Romanelli}, P. 1990, Physics Letters B,
+  248, 146, \dodoi{10.1016/0370-2693(90)90029-6}
+
+\bibitem[{{Adelberger} {et~al.}(2011){Adelberger}, {Garc{\'{\i}}a},
+  {Robertson}, {Snover}, {Balantekin}, {Heeger}, {Ramsey-Musolf}, {Bemmerer},
+  {Junghans}, {Bertulani}, {Chen}, {Costantini}, {Prati}, {Couder},
+  {Uberseder}, {Wiescher}, {Cyburt}, {Davids}, {Freedman}, {Gai}, {Gazit},
+  {Gialanella}, {Imbriani}, {Greife}, {Hass}, {Haxton}, {Itahashi}, {Kubodera},
+  {Langanke}, {Leitner}, {Leitner}, {Vetter}, {Winslow}, {Marcucci},
+  {Motobayashi}, {Mukhamedzhanov}, {Tribble}, {Nollett}, {Nunes}, {Park},
+  {Parker}, {Schiavilla}, {Simpson}, {Spitaleri}, {Strieder}, {Trautvetter},
+  {Suemmerer}, \& {Typel}}]{2011RvMP...83..195A}
+{Adelberger}, E.~G., {Garc{\'{\i}}a}, A., {Robertson}, R.~G.~H., {et~al.} 2011,
+  RMP, 83, 195, \dodoi{10.1103/RevModPhys.83.195}
+
+\bibitem[{{Aerts} {et~al.}(2010){Aerts}, {Christensen-Dalsgaard}, \&
+  {Kurtz}}]{2010aste.book.....A}
+{Aerts}, C., {Christensen-Dalsgaard}, J., \& {Kurtz}, D.~W. 2010,
+  {Asteroseismology} (Springer Science)
+
+\bibitem[{{Asplund} {et~al.}(2009){Asplund}, {Grevesse}, {Sauval}, \&
+  {Scott}}]{2009ARA&A..47..481A}
+{Asplund}, M., {Grevesse}, N., {Sauval}, A.~J., \& {Scott}, P. 2009, \araa, 47,
+  481, \dodoi{10.1146/annurev.astro.46.060407.145222}
+
+\bibitem[{Basu \& Chaplin(2017)}]{10.2307/j.ctt1vwmgmn}
+Basu, S., \& Chaplin, W.~J. 2017, Asteroseismic Data Analysis (Princeton
+  University Press).
+\newblock \url{http://www.jstor.org/stable/j.ctt1vwmgmn}
+
+\bibitem[{{Bazot} {et~al.}(2012){Bazot}, {Bourguignon}, \&
+  {Christensen-Dalsgaard}}]{2012MNRAS.427.1847B}
+{Bazot}, M., {Bourguignon}, S., \& {Christensen-Dalsgaard}, J. 2012, \mnras,
+  427, 1847, \dodoi{10.1111/j.1365-2966.2012.21818.x}
+
+\bibitem[{{Bellinger} {et~al.}(2019){Bellinger}, {Hekker, S.}, {Angelou, G.
+  C.}, {Stokholm, A.}, \& {Basu, S.}}]{Bellinger2019a}
+{Bellinger}, E.~P., {Hekker, S.}, {Angelou, G. C.}, {Stokholm, A.}, \& {Basu,
+  S.} 2019, \aap, 622, arXiv:1812.06979, \dodoi{10.1051/0004-6361/201834461}
+
+\bibitem[{{Bonanno} \& {Schlattl}(2006)}]{2006ESASP.617E..37B}
+{Bonanno}, A., \& {Schlattl}, H. 2006, in ESA Special Publication, Vol. 617,
+  SOHO-17, 37
+
+\bibitem[{{Borucki} {et~al.}(2010){Borucki}, {Koch}, {Basri}, {Batalha},
+  {Brown}, {Caldwell}, {Caldwell}, {Christensen-Dalsgaard}, {Cochran},
+  {DeVore}, {Dunham}, {Dupree}, {Gautier}, {Geary}, {Gilliland}, {Gould},
+  {Howell}, {Jenkins}, {Kondo}, {Latham}, {Marcy}, {Meibom}, {Kjeldsen},
+  {Lissauer}, {Monet}, {Morrison}, {Sasselov}, {Tarter}, {Boss}, {Brownlee},
+  {Owen}, {Buzasi}, {Charbonneau}, {Doyle}, {Fortney}, {Ford}, {Holman},
+  {Seager}, {Steffen}, {Welsh}, {Rowe}, {Anderson}, {Buchhave}, {Ciardi},
+  {Walkowicz}, {Sherry}, {Horch}, {Isaacson}, {Everett}, {Fischer}, {Torres},
+  {Johnson}, {Endl}, {MacQueen}, {Bryson}, {Dotson}, {Haas}, {Kolodziejczak},
+  {Van Cleve}, {Chandrasekaran}, {Twicken}, {Quintana}, {Clarke}, {Allen},
+  {Li}, {Wu}, {Tenenbaum}, {Verner}, {Bruhweiler}, {Barnes}, \&
+  {Prsa}}]{2010Sci...327..977B}
+{Borucki}, W.~J., {Koch}, D., {Basri}, G., {et~al.} 2010, Science, 327, 977,
+  \dodoi{10.1126/science.1185402}
+
+\bibitem[{{Chiba}(2011)}]{2011PThPh.126..993C}
+{Chiba}, T. 2011, Progress of Theoretical Physics, 126, 993,
+  \dodoi{10.1143/PTP.126.993}
+
+\bibitem[{{Christensen-Dalsgaard}(1988)}]{1988IAUS..123..295C}
+{Christensen-Dalsgaard}, J. 1988, in IAU Symposium, Vol. 123, Advances in
+  Helio- and Asteroseismology, ed. J.~{Christensen-Dalsgaard} \& S.~{Frandsen},
+  295
+
+\bibitem[{{Christensen-Dalsgaard}(2008{\natexlab{a}})}]{2008Ap&SS.316...13C}
+{Christensen-Dalsgaard}, J. 2008{\natexlab{a}}, \apss, 316, 13,
+  \dodoi{10.1007/s10509-007-9675-5}
+
+\bibitem[{{Christensen-Dalsgaard}(2008{\natexlab{b}})}]{2008Ap&SS.316..113C}
+---. 2008{\natexlab{b}}, \apss, 316, 113, \dodoi{10.1007/s10509-007-9689-z}
+
+\bibitem[{{Coc} {et~al.}(2014){Coc}, {Uzan}, \&
+  {Vangioni}}]{2014JCAP...10..050C}
+{Coc}, A., {Uzan}, J.-P., \& {Vangioni}, E. 2014, \jcap, 2014, 050,
+  \dodoi{10.1088/1475-7516/2014/10/050}
+
+\bibitem[{{C{\'o}rsico} {et~al.}(2013){C{\'o}rsico}, {Althaus},
+  {Garc{\'{\i}}a-Berro}, \& {Romero}}]{2013JCAP...06..032C}
+{C{\'o}rsico}, A.~H., {Althaus}, L.~G., {Garc{\'{\i}}a-Berro}, E., \& {Romero},
+  A.~D. 2013, \jcap, 6, 032, \dodoi{10.1088/1475-7516/2013/06/032}
+
+\bibitem[{{Creevey} {et~al.}(2017){Creevey}, {Metcalfe}, {Schultheis},
+  {Salabert}, {Bazot}, {Th{\'e}venin}, {Mathur}, {Xu}, \&
+  {Garc{\'{\i}}a}}]{2017A&A...601A..67C}
+{Creevey}, O.~L., {Metcalfe}, T.~S., {Schultheis}, M., {et~al.} 2017, \aap,
+  601, A67, \dodoi{10.1051/0004-6361/201629496}
+
+\bibitem[{{Damour} \& {Taylor}(1991)}]{1991ApJ...366..501D}
+{Damour}, T., \& {Taylor}, J.~H. 1991, \apj, 366, 501, \dodoi{10.1086/169585}
+
+\bibitem[{{degl'Innocenti} {et~al.}(1996){degl'Innocenti}, {Fiorentini},
+  {Raffelt}, {Ricci}, \& {Weiss}}]{1996A&A...312..345D}
+{degl'Innocenti}, S., {Fiorentini}, G., {Raffelt}, G.~G., {Ricci}, B., \&
+  {Weiss}, A. 1996, \aap, 312, 345
+
+\bibitem[{{Demarque} {et~al.}(1994){Demarque}, {Krauss}, {Guenther}, \&
+  {Nydam}}]{1994ApJ...437..870D}
+{Demarque}, P., {Krauss}, L.~M., {Guenther}, D.~B., \& {Nydam}, D. 1994, \apj,
+  437, 870, \dodoi{10.1086/175048}
+
+\bibitem[{{Dirac}(1937)}]{1937Natur.139..323D}
+{Dirac}, P.~A.~M. 1937, \nat, 139, 323, \dodoi{10.1038/139323a0}
+
+\bibitem[{{Foreman-Mackey} {et~al.}(2013){Foreman-Mackey}, {Hogg}, {Lang}, \&
+  {Goodman}}]{emcee}
+{Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D., \& {Goodman}, J. 2013, PASP,
+  125, 306, \dodoi{10.1086/670067}
+
+\bibitem[{{Garc{\'{\i}}a-Berro} {et~al.}(2011){Garc{\'{\i}}a-Berro},
+  {Lor{\'e}n-Aguilar}, {Torres}, {Althaus}, \& {Isern}}]{2011JCAP...05..021G}
+{Garc{\'{\i}}a-Berro}, E., {Lor{\'e}n-Aguilar}, P., {Torres}, S., {Althaus},
+  L.~G., \& {Isern}, J. 2011, \jcap, 5, 021,
+  \dodoi{10.1088/1475-7516/2011/05/021}
+
+\bibitem[{{Genova} {et~al.}(2018){Genova}, {Mazarico}, {Goossens}, {Lemoine},
+  {Neumann}, {Smith}, \& {Zuber}}]{2018NatCo...9..289G}
+{Genova}, A., {Mazarico}, E., {Goossens}, S., {et~al.} 2018, Nature Comm., 9,
+  289, \dodoi{10.1038/s41467-017-02558-1}
+
+\bibitem[{{Goodman} \& {Weare}(2010)}]{2010CAMCS...5...65G}
+{Goodman}, J., \& {Weare}, J. 2010, Comm. in Appl. Math. and Comp. Sci., 5, 65,
+  \dodoi{10.2140/camcos.2010.5.65}
+
+\bibitem[{{Grevesse} \& {Sauval}(1998)}]{1998SSRv...85..161G}
+{Grevesse}, N., \& {Sauval}, A.~J. 1998, \ssr, 85, 161,
+  \dodoi{10.1023/A:1005161325181}
+
+\bibitem[{{Guenther} {et~al.}(1998){Guenther}, {Krauss}, \&
+  {Demarque}}]{1998ApJ...498..871G}
+{Guenther}, D.~B., {Krauss}, L.~M., \& {Demarque}, P. 1998, \apj, 498, 871,
+  \dodoi{10.1086/305567}
+
+\bibitem[{Hellings {et~al.}(1983)Hellings, Adams, Anderson, Keesey, Lau,
+  Standish, Canuto, \& Goldman}]{PhysRevLett.51.1609}
+Hellings, R.~W., Adams, P.~J., Anderson, J.~D., {et~al.} 1983, Phys. Rev.
+  Lett., 51, 1609, \dodoi{10.1103/PhysRevLett.51.1609}
+
+\bibitem[{Hofmann \& M\"uller(2018)}]{0264-9381-35-3-035015}
+Hofmann, F., \& M\"uller, J. 2018, Classical and Quantum Gravity, 35, 035015.
+\newblock \url{http://stacks.iop.org/0264-9381/35/i=3/a=035015}
+
+\bibitem[{{Lund} \& {Reese}(2018)}]{2018ASSP...49..149L}
+{Lund}, M.~N., \& {Reese}, D.~R. 2018, Asteroseismology and Exoplanets:
+  Listening to the Stars and Searching for New Worlds, 49, 149,
+  \dodoi{10.1007/978-3-319-59315-9_8}
+
+\bibitem[{{Lund} {et~al.}(2017){Lund}, {Silva Aguirre}, {Davies}, {Chaplin},
+  {Christensen-Dalsgaard}, {Houdek}, {White}, {Bedding}, {Ball}, {Huber},
+  {Antia}, {Lebreton}, {Latham}, {Handberg}, {Verma}, {Basu}, {Casagrande},
+  {Justesen}, {Kjeldsen}, \& {Mosumgaard}}]{2017ApJ...835..172L}
+{Lund}, M.~N., {Silva Aguirre}, V., {Davies}, G.~R., {et~al.} 2017, \apj, 835,
+  172, \dodoi{10.3847/1538-4357/835/2/172}
+
+\bibitem[{{Maeder}(1977)}]{1977A&A....56..359M}
+{Maeder}, A. 1977, \aap, 56, 359
+
+\bibitem[{{Masuda} \& {Suto}(2016)}]{2016PASJ...68L...5M}
+{Masuda}, K., \& {Suto}, Y. 2016, \pasj, 68, L5, \dodoi{10.1093/pasj/psw017}
+
+\bibitem[{{Mohr} {et~al.}(2016){Mohr}, {Newell}, \&
+  {Taylor}}]{2016RvMP...88c5009M}
+{Mohr}, P.~J., {Newell}, D.~B., \& {Taylor}, B.~N. 2016, RMP, 88, 035009,
+  \dodoi{10.1103/RevModPhys.88.035009}
+
+\bibitem[{{Murphy}(2013)}]{2013RPPh...76g6901M}
+{Murphy}, T.~W. 2013, Reports on Progress in Physics, 76, 076901,
+  \dodoi{10.1088/0034-4885/76/7/076901}
+
+\bibitem[{{Nagata} {et~al.}(2004){Nagata}, {Chiba}, \&
+  {Sugiyama}}]{2004PhRvD..69h3512N}
+{Nagata}, R., {Chiba}, T., \& {Sugiyama}, N. 2004, \prd, 69, 083512,
+  \dodoi{10.1103/PhysRevD.69.083512}
+
+\bibitem[{{Planck Collaboration} {et~al.}(2016){Planck Collaboration}, {Ade},
+  {Aghanim}, {Arnaud}, {Ashdown}, {Aumont}, {Baccigalupi}, {Banday},
+  {Barreiro}, {Bartlett}, \& et~al.}]{2016A&A...594A..13P}
+{Planck Collaboration}, {Ade}, P.~A.~R., {Aghanim}, N., {et~al.} 2016, \aap,
+  594, A13, \dodoi{10.1051/0004-6361/201525830}
+
+\bibitem[{{R Core Team}(2014)}]{r}
+{R Core Team}. 2014, R, R Foundation.
+\newblock \url{http://www.R-project.org/}
+
+\bibitem[{{Rendle} {et~al.}(2019){Rendle}, {Buldgen}, {Miglio}, {Reese},
+  {Noels}, {Davies}, {Campante}, {Chaplin}, {Lund}, {Kuszlewicz}, {Scott},
+  {Scuflaire}, {Ball}, {Smetana}, \& {Nsamba}}]{2019MNRAS.484..771R}
+{Rendle}, B.~M., {Buldgen}, G., {Miglio}, A., {et~al.} 2019, \mnras, 484, 771,
+  \dodoi{10.1093/mnras/stz031}
+
+\bibitem[{{Roxburgh}(2018)}]{2018arXiv180807556R}
+{Roxburgh}, I.~W. 2018, arXiv e-prints.
+\newblock \doarXiv{1808.07556}
+
+\bibitem[{{Roxburgh} \& {Vorontsov}(2003)}]{2003A&A...411..215R}
+{Roxburgh}, I.~W., \& {Vorontsov}, S.~V. 2003, \aap, 411, 215,
+  \dodoi{10.1051/0004-6361:20031318}
+
+\bibitem[{{Sahni} \& {Shtanov}(2014)}]{2014IJMPD..2342018S}
+{Sahni}, V., \& {Shtanov}, Y. 2014, Int. J. Mod. Phys. D, 23, 1442018,
+  \dodoi{10.1142/S0218271814420188}
+
+\bibitem[{{Silva Aguirre} {et~al.}(2017){Silva Aguirre}, {Lund}, {Antia},
+  {Ball}, {Basu}, {Christensen-Dalsgaard}, {Lebreton}, {Reese}, {Verma},
+  {Casagrande}, {Justesen}, {Mosumgaard}, {Chaplin}, {Bedding}, {Davies},
+  {Handberg}, {Houdek}, {Huber}, {Kjeldsen}, {Latham}, {White}, {Coelho},
+  {Miglio}, \& {Rendle}}]{2017ApJ...835..173S}
+{Silva Aguirre}, V., {Lund}, M.~N., {Antia}, H.~M., {et~al.} 2017, \apj, 835,
+  173, \dodoi{10.3847/1538-4357/835/2/173}
+
+\bibitem[{{Smullin} \& {Fiocco}(1962)}]{1962Natur.194.1267S}
+{Smullin}, L.~D., \& {Fiocco}, G. 1962, \nat, 194, 1267,
+  \dodoi{10.1038/1941267a0}
+
+\bibitem[{Teller(1948)}]{PhysRev.73.801}
+Teller, E. 1948, Phys. Rev., 73, 801, \dodoi{10.1103/PhysRev.73.801}
+
+\bibitem[{{Uzan}(2003)}]{2003RvMP...75..403U}
+{Uzan}, J.-P. 2003, RMP, 75, 403, \dodoi{10.1103/RevModPhys.75.403}
+
+\bibitem[{Uzan(2011)}]{Uzan2011}
+Uzan, J.-P. 2011, Living Reviews in Relativity, 14, 2,
+  \dodoi{10.12942/lrr-2011-2}
+
+\bibitem[{{Zhu} {et~al.}(2019){Zhu}, {Desvignes}, {Wex}, {Caballero},
+  {Champion}, {Demorest}, {Ellis}, {Janssen}, {Kramer}, {Krieger}, {Lentati},
+  {Nice}, {Ransom}, {Stairs}, {Stappers}, {Verbiest}, {Arzoumanian}, {Bassa},
+  {Burgay}, {Cognard}, {Crowter}, {Dolch}, {Ferdman}, {Fonseca}, {Gonzalez},
+  {Graikou}, {Guillemot}, {Hessels}, {Jessner}, {Jones}, {Jones}, {Jordan},
+  {Karuppusamy}, {Lam}, {Lazaridis}, {Lazarus}, {Lee}, {Levin}, {Liu}, {Lyne},
+  {McKee}, {McLaughlin}, {Os{\l}owski}, {Pennucci}, {Perrodin}, {Possenti},
+  {Sanidas}, {Shaifullah}, {Smits}, {Stovall}, {Swiggum}, {Theureau}, \&
+  {Tiburzi}}]{2019MNRAS.482.3249Z}
+{Zhu}, W.~W., {Desvignes}, G., {Wex}, N., {et~al.} 2019, \mnras, 482, 3249,
+  \dodoi{10.1093/mnras/sty2905}
+
+\end{thebibliography}

@@ -1,0 +1,1 @@
+**Bellinger, E. P. & Christensen-Dalsgaard, J.** (2019). *Asteroseismic constraints on the cosmic-time variation of the gravitational constant from an ancient main-sequence star*. **The Astrophysical Journal Letters**, accepted.

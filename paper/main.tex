@@ -26,6 +26,12 @@
 \definecolor{darkred}{rgb}{0.75, 0, 0}
 \newcommand{\mbb}[1]{\ifreff\textcolor{darkred}{#1}\else #1\fi}
 
+\newif\ifrefff
+\reffftrue
+\reffffalse
+\definecolor{darkred}{rgb}{0.75, 0, 0}
+\newcommand{\mbbb}[1]{\ifrefff\textcolor{darkred}{#1}\else #1\fi}
+
 
 %\received{\today}
 %\revised{...}
@@ -58,7 +64,7 @@ Denmark}
 
 \begin{abstract} 
     We investigate the variation of the gravitational constant $G$ over the history of the Universe by modeling the effects on the evolution and asteroseismology of the low-mass star KIC~7970740, which is one of the oldest ($\sim 11$~Gyr) and best-observed solar-like oscillators in the Galaxy. 
-    From these data we find ${\dot{G}/G = (2.1 \pm 2.9) \times 10^{-12}~\text{yr}^{-1}}$, that is, no evidence for any variation in $G$. 
+    From these data we find ${\dot{G}/G = \mbbb{(1.2 \pm 2.6)} \times 10^{-12}~\text{yr}^{-1}}$, that is, no evidence for any variation in $G$. 
     We also find a Bayesian asteroseismic estimate of the age of the Universe as well as astrophysical S-factors for five nuclear reactions obtained through a 12-dimensional stellar evolution Markov chain Monte Carlo simulation. 
 \end{abstract}
 
@@ -244,16 +250,16 @@ With twelve dimensions, this is, to our knowledge, the most complex asteroseismi
 \end{figure}
 
 The procedure outlined in the previous section yields several results. 
-The main result is the value of the gravitational evolution parameter, which we find to be ${\beta = 0.029 \pm 0.041}$. 
-We also infer from this analysis an estimate of the age of the Universe, which we find to be ${t_0 = 13.80 \pm 0.14}$~Gyr. 
+The main result is the value of the gravitational evolution parameter, which we find to be ${\beta = \mbbb{0.017 \pm 0.035}}$. 
+We also infer from this analysis an estimate of the age of the Universe, which we find to be ${t_0 = \mbbb{13.797 \pm 0.019}}$~Gyr. 
 Combining these two quantities yields a rate of change in $G$ of 
 \begin{equation}
-    \dot{G}/G = \beta/t_0 = (2.1 \pm 2.9) \times 10^{-12}~\text{yr}^{-1}.
+    \dot{G}/G = \beta/t_0 = \mbbb{(1.2 \pm 2.6)} \times 10^{-12}~\text{yr}^{-1}.
 \end{equation}
 Hence we find no evidence for a variable gravitational constant. 
 We furthermore place a 95\% upper bound on the absolute variation 
 \begin{equation}
-    |\dot{G}/G| \leq 6.9 \times 10^{-12}\;\text{yr}^{-1}
+    |\dot{G}/G| \leq \mbbb{5.6} \times 10^{-12}\;\text{yr}^{-1}
 \end{equation}
 as visualized in Figure~\ref{fig:upper-bound}. 
 The posterior estimates for the five nuclear reaction rates are consistent with their prior values. 
@@ -265,11 +271,11 @@ We tested this procedure under two assumptions of the solar composition: the \ci
 
 Lastly, we obtain new estimates for the stellar parameters of KIC~7970740: 
 \begin{alignat}{2}
-    \tau   \;=&&~ 10.7   &\pm  1.2  ~\text{Gyr} \notag\\
-    M    \;=&&~ 0.725    &\pm  0.044    ~\text{M}_\odot \notag\\
-    Y_0      \;=&&~ 0.251    &\pm 0.033 \\
-    Z_0       \;=&&~ 0.0059 &\pm  0.0013 \notag\\
-    \alpha_{\text{MLT}}  \;=&&~ 1.90   &\pm  0.23. \notag
+    \tau   \;=&&~ \mbbb{10.9}   &\pm  \mbbb{1.2}  ~\text{Gyr} \notag\\
+    M    \;=&&~ \mbbb{0.725}    &\pm  \mbbb{0.043}    ~\text{M}_\odot \notag\\
+    Y_0      \;=&&~ \mbbb{0.252}    &\pm \mbbb{0.035} \\
+    Z_0       \;=&&~ \mbbb{0.0058} &\pm  \mbbb{0.0012} \notag\\
+    \alpha_{\text{MLT}}  \;=&&~ \mbbb{1.89}   &\pm  \mbbb{0.23}. \notag
 \end{alignat}
 %These are tabulated in Table~\ref{tab:posterior}. 
 These values are in good agreement with those presented by \citet{2017ApJ...835..173S}, who found for this star a mass of ${0.728 \pm 0.020~\text{M}_\odot}$ and an age of $12.9 \pm 1.6$~Gyr. 
@@ -283,10 +289,10 @@ In addition, it will be interesting to use asteroseismology to constrain the var
 
 
 \acknowledgements{} 
-    We thank the anonymous referee for useful comments and suggestions. 
+    We thank Margarida Cunha, Martin Bo Nielsen, and the anonymous referee for useful comments and suggestions. 
     Funding for the Stellar Astrophysics Centre is provided by The Danish National Research Foundation (Grant agreement no.: DNRF106). 
     The numerical results presented in this work were obtained at the Centre for Scientific Computing, Aarhus. %\footnote{\url{http://phys.au.dk/forskning/cscaa/}}.
-\software{} Python, emcee \citep{emcee}, R \citep{r}, ASTEC \citep{2008Ap&SS.316...13C}, ADIPLS \citep{2008Ap&SS.316..113C}
+\software{} Python, emcee \citep{emcee}, R \citep{r}, ASTEC, and ADIPLS \citep{2008Ap&SS.316...13C, 2008Ap&SS.316..113C}
 
 
 %\clearpage

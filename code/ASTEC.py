@@ -28,13 +28,13 @@ nwalkers, nthreads, niter, nperturb = 40, 8, 1000, 100000
 
 # Priors and starting point 
 # Normal on t_0 and reaction rates; flat on all others 
-names     = [   't',  'M',  'Y',    'Z',     'a',    'b',  't_0', 'r1', 'r2', 'r3', 'r4', 'r5']
-X_max     = [13.799,    1,  0.4,   0.02,     2.5,    0.2, 14.219,    2,    2,    2,    2,    2]
-X_min     = [     0,  0.5,  0.2,  0.001,     0.2,   -0.2, 13.379,    0,    0,    0,    0,    0]
-prior_mu  =                                              [13.799,    1,    1,    1,    1,    1]
-prior_cov =                                      np.diag([ 0.021, 0.01, 0.05, 0.05, 0.08, 0.07])
-start     = [  11.1, 0.72, 0.25,  0.005,    1.72,     0., 13.799,   1.,   1.,   1.,   1.,   1.]
-start_cov = [     1, 0.03, 0.01,  0.001,     0.1,   0.01] + list(np.diag(prior_cov))
+names     = [   't',   'M',  'Y',    'Z',     'a',    'b',  't_0', 'r1', 'r2', 'r3', 'r4', 'r5']
+X_max     = [13.799,     1,  0.4,   0.02,     2.5,    0.2, 14.219,    2,    2,    2,    2,    2]
+X_min     = [     0,   0.5,  0.2,  0.001,     0.2,   -0.2, 13.379,    0,    0,    0,    0,    0]
+prior_mu  =                                               [13.799,    1,    1,    1,    1,    1]
+prior_cov =                              np.diag(np.array([ 0.021, 0.01, 0.05, 0.05, 0.08, 0.07])**2)
+start     = [  10.7, 0.725, 0.251,  0.0059,   1.90,    0., 13.799,   1.,   1.,   1.,   1.,   1.]
+start_cov = [   1.2, 0.044, 0.033,  0.0013,    0.1,   0.01] + list(np.diag(prior_cov))
 ndim = len(names)
 
 # Directories and save files 
